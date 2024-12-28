@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('train.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="checkbox"], .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group .options {
+            margin-top: 10px;
+        }
+        .form-group .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>登記</h1>
+        <form action="#" method="post">
+            <!-- Account Input -->
+            <div class="form-group">
+                <label for="username">帳號:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <label for="password">密碼:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- Date of Birth Input -->
+            <div class="form-group">
+                <label for="dob">出生日期:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Single Choice Question -->
+            <div class="form-group">
+                <label>性別:</label>
+                <div class="options">
+                    <label><input type="radio" name="gender" value="male" required> 男性</label>
+                    <label><input type="radio" name="gender" value="female"> 女性</label>
+                    <label><input type="radio" name="gender" value="other"> 其他</label>
+                </div>
+            </div>
+
+            <!-- Multiple Choice Question -->
+            <div class="form-group">
+                <label>興趣:</label>
+                <div class="options">
+                    <label><input type="checkbox" name="hobbies" value="reading">騎乘腳踏車</label>
+                    <label><input type="checkbox" name="hobbies" value="sports"> 運動</label>
+                    <label><input type="checkbox" name="hobbies" value="music"> 音樂</label>
+                    <label><input type="checkbox" name="hobbies" value="traveling">旅行</label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">送出</button>
+        </form>
+    </div>
+</body>
+</html>
